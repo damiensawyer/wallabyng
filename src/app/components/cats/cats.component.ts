@@ -1,3 +1,4 @@
+import { DamienService } from '../../services/damien.service';
 import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cats.component.css']
 })
 export class CatsComponent implements OnInit {
-  constructor() {}
+  message: string;
+  constructor(public service: DamienService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.message = `Adding numbers 1 + 10 = ${this.service.addNumbers(1, 10)}`;
+  }
 }
