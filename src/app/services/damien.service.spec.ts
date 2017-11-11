@@ -3,15 +3,11 @@ import { TestBed, inject } from '@angular/core/testing';
 import { DamienService } from './damien.service';
 
 describe('DamienService', () => {
-  let blah: DamienService;
-  beforeEach(
-    inject([DamienService], (service: DamienService) => {
-      TestBed.configureTestingModule({
-        providers: [DamienService]
-      });
-      blah = service;
-    })
-  );
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [DamienService]
+    });
+  });
 
   it(
     'should be created',
